@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>
+        Airbnb AI Price Predictor
+    </title>
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+
+
+
+<body>
+
+
+<!-- Navbar -->
+
+<nav>
+
+
+    <div class="logo">
+
+        🏠 Airbnb AI
+
+    </div>
+
+
+    <div class="nav-links">
+
+        <a href="/">
+            Home
+        </a>
+
+
+        <a href="#predict">
+            Predict
+        </a>
+
+
+        <a href="dashboard">
+            Dashboard
+        </a>
+
+
+        <a href="login">
+            Login
+        </a>
+
+
+    </div>
+
+
+</nav>
+
+
+
+
+<!-- Hero Section -->
+
+
+<section class="hero">
+
+
+    <div class="hero-content">
+
+
+        <h1>
+            Predict Your Airbnb Price
+        </h1>
+
+
+        <p>
+            AI-powered Airbnb price prediction using Data Analysis and Machine Learning
+        </p>
+
+
+        <a href="#predict">
+
+            <button>
+                Start Prediction
+            </button>
+
+        </a>
+
+
+    </div>
+
+
+</section>
+
+
+
+
+
+<!-- Features Section -->
+
+
+<section class="features">
+
+
+    <div class="feature-card">
+
+
+        <h2>
+            📊 Data Analysis
+        </h2>
+
+
+        <p>
+            Analyze Airbnb data and understand pricing patterns.
+        </p>
+
+
+    </div>
+
+
+
+
+    <div class="feature-card">
+
+
+        <h2>
+            🤖 Machine Learning
+        </h2>
+
+
+        <p>
+            Random Forest model predicts accurate rental prices.
+        </p>
+
+
+    </div>
+
+
+
+
+    <div class="feature-card">
+
+
+        <h2>
+            🏡 Smart Prediction
+        </h2>
+
+
+        <p>
+            Get instant Airbnb price estimation.
+        </p>
+
+
+    </div>
+
+
+</section>
+
+
+
+
+
+<!-- Prediction Section -->
+
+
+<section id="predict" class="prediction">
+
+
+<h1>
+    Enter Property Details
+</h1>
+
+
+
+<div class="card">
+
+
+
+<label>
+Location
+</label>
+
+
+<select id="location">
+
+
+<option>
+Manhattan
+</option>
+
+
+<option>
+Brooklyn
+</option>
+
+
+<option>
+Queens
+</option>
+
+
+<option>
+Bronx
+</option>
+
+
+<option>
+Staten Island
+</option>
+
+
+</select>
+
+
+
+
+
+<label>
+Room Type
+</label>
+
+
+<select id="room">
+
+
+<option>
+Entire home/apt
+</option>
+
+
+<option>
+Private room
+</option>
+
+
+<option>
+Shared room
+</option>
+
+
+</select>
+
+
+
+
+
+<input 
+type="number"
+id="nights"
+placeholder="Minimum Nights"
+>
+
+
+
+
+<input 
+type="number"
+id="reviews"
+placeholder="Number of Reviews"
+>
+
+
+
+
+<input 
+type="number"
+id="availability"
+placeholder="Availability Days"
+>
+
+
+
+
+<button onclick="predictPrice()">
+
+Predict Price
+
+</button>
+
+
+
+
+<div class="result">
+
+
+<h2 id="result">
+
+</h2>
+
+
+</div>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+<!-- Footer -->
+
+
+<footer>
+
+
+<p>
+© 2026 Airbnb AI Price Predictor | Machine Learning Project
+</p>
+
+
+</footer>
+
+
+
+
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+
+</body>
+
+
+</html>

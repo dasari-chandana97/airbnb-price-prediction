@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>
+Airbnb AI Dashboard
+</title>
+
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+</head>
+
+
+<body>
+
+
+<!-- Navbar -->
+
+<nav>
+
+<div class="logo">
+🏠 Airbnb AI
+</div>
+
+
+<div class="nav-links">
+
+<a href="/">
+Home
+</a>
+
+<a href="/dashboard">
+Dashboard
+</a>
+
+<a href="/login">
+Logout
+</a>
+
+</div>
+
+</nav>
+
+
+
+<!-- Welcome -->
+
+<section class="welcome">
+
+<h1>
+Welcome Back 👋
+</h1>
+
+<p>
+Analyze Airbnb properties and predict rental prices using Machine Learning
+</p>
+
+</section>
+
+
+
+
+<!-- Cards -->
+
+
+<section class="cards">
+
+
+<div class="card">
+
+<h3>
+Total Properties
+</h3>
+
+<h1>
+250
+</h1>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+Average Price
+</h3>
+
+<h1>
+$150
+</h1>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>
+Model Accuracy
+</h3>
+
+<h1>
+82%
+</h1>
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- Prediction -->
+
+
+<section class="prediction-section">
+
+
+<div class="prediction-card">
+
+
+<h2>
+🏡 Predict Airbnb Price
+</h2>
+
+
+
+<label>
+Location
+</label>
+
+
+<select id="location">
+
+<option>Manhattan</option>
+
+<option>Brooklyn</option>
+
+<option>Queens</option>
+
+<option>Bronx</option>
+
+<option>Staten Island</option>
+
+</select>
+
+
+
+
+<label>
+Room Type
+</label>
+
+
+<select id="room_type">
+
+<option>Entire home/apt</option>
+
+<option>Private room</option>
+
+<option>Shared room</option>
+
+</select>
+
+
+
+
+<input 
+id="minimum_nights"
+type="number"
+placeholder="Minimum Nights"
+>
+
+
+
+<input 
+id="reviews"
+type="number"
+placeholder="Number of Reviews"
+>
+
+
+
+
+<input 
+id="availability"
+type="number"
+placeholder="Availability Days"
+>
+
+
+
+
+<button onclick="predictPrice()">
+
+Predict Price
+
+</button>
+
+
+
+<div class="result-card">
+
+<h2 id="result">
+
+</h2>
+
+</div>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+<!-- Chart -->
+
+
+<section class="chart-box">
+
+
+<h2>
+Price Analysis
+</h2>
+
+
+<canvas id="priceChart"></canvas>
+
+
+</section>
+
+
+
+
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+
+</body>
+
+</html>
